@@ -6,4 +6,5 @@ type User struct {
 	mongox.Model `bson:"inline"`
 	Name         string `bson:"name,omitempty"`
 	Age          int    `bson:"age,omitempty"`
+	Sex          string `bson:"sex,omitempty"`
 }

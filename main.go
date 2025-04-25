@@ -17,5 +17,8 @@ func main() {
 	// dao.TestUserUpdate()
 
 	// 删除用户(deletor操作)
-	dao.TestUserDelete()
+	// dao.TestUserDelete()
+
+	// 聚合操作
+	dao.TestUserAggregator()
 }

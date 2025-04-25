@@ -7,7 +7,7 @@ import (
 )
 
 func (d *UserDao) UserInsertOne() {
-	insertOneResult, err := d.coll.Creator().InsertOne(context.Background(), &model.User{Name: "Mingyong Chen", Age: 18})
+	insertOneResult, err := d.coll.Creator().InsertOne(context.Background(), &model.User{Name: "Mingyong Chen", Age: 18, Sex: "male"})
 	if err != nil {
 		panic(err)
 	}
@@ -19,8 +19,9 @@ func (d *UserDao) UserInsertOne() {
 
 func (d *UserDao) UserInsertMany() {
 	insertManyResult, err := d.coll.Creator().InsertMany(context.Background(), []*model.User{
-		{Name: "Mingyong Chen", Age: 18},
-		{Name: "codepzj", Age: 18},
+		{Name: "Mingyong Chen", Age: 18, Sex: "female"},
+		{Name: "codepzj", Age: 18, Sex: "male"},
+		{Name: "Mingyong", Age: 18, Sex: "unknown"},
 	})
 	if err != nil {
 		panic(err)

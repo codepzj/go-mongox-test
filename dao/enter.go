@@ -45,3 +45,8 @@ func TestUserDelete() {
 	userDao.UserDeleteMany()
 }
 
+func TestUserAggregator() {
+	userDao.UserIgnoreAge()
+	userDao.UserPagination()
+	userDao.UserGroup()
+}
